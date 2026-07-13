@@ -1,0 +1,124 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Recipe Management System</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+
+    <div class="add-recipe">
+      <label for="recipe-name">Recipe Name:</label>
+      <input
+        type="text"
+        name="recipe-name"
+        id="recipe-name"
+        class="recipe-name"
+        placeholder="Enter Recipe Name"
+      />
+      <br />
+      <label for="recipe-catagory">Recipe Catagory:</label>
+      <input
+        type="text"
+        name="recipe-catagory"
+        class="recipe-catagory"
+        id="recipe-catagory"
+        placeholder="Enter Recipe Catagory"
+      />
+      <br />
+      <label for="recipe-ingredients">Recipe Ingredients:</label>
+      <input
+        type="text"
+        name="recipe-ingredients"
+        id="recipe-ingredients"
+        class="recipe-ingredients"
+        placeholder="Enter Recipe Ingredients"
+      />
+      <br />
+      <label for="recipe-description">Recipe Description:</label>
+      <input
+        type="text"
+        name="recipe-description"
+        id="recipe-description"
+        class="recipe-description"
+        placeholder="Enter Recipe Description"
+      />
+      <br />
+      <button>Add Recipe</button>
+    </div>
+
+    <div class="search-container">
+      <input type="search" name="search" id="search" class="search" />
+      <button id="search-btn">Search</button>
+      <div>
+        <input
+          type="radio"
+          name="filter"
+          id="searchByName"
+          class="searchByName"
+          checked
+        />
+        <label for="searchByName">Name</label>
+      </div>
+      <div>
+        <input
+          type="radio"
+          name="filter"
+          id="searchByCatagory"
+          class="searchByCatagory"
+        />
+        <label for="searchByCatagory">Catagory</label>
+      </div>
+      <div>
+        <input
+          type="radio"
+          name="filter"
+          id="searchByIngredients"
+          class="searchByIngredients"
+        />
+        <label for="searchByIngredients">Ingredients</label>
+      </div>
+    </div>
+    <div class="all-recipe" id="all-recipe">
+      <div class="recipe">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+        necessitatibus in, ut optio facere cupiditate laboriosam fuga aut, sint
+        voluptas explicabo perspiciatis. Vel voluptates explicabo numquam
+        reprehenderit dignissimos ad beatae?
+      </div>
+      <div class="recipe">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+        necessitatibus in, ut optio facere cupiditate laboriosam fuga aut, sint
+        voluptas explicabo perspiciatis. Vel voluptates explicabo numquam
+        reprehenderit dignissimos ad beatae?
+      </div>
+      <div class="recipe">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+        necessitatibus in, ut optio facere cupiditate laboriosam fuga aut, sint
+        voluptas explicabo perspiciatis. Vel voluptates explicabo numquam
+        reprehenderit dignissimos ad beatae?
+      </div>
+      <div class="recipe">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+        necessitatibus in, ut optio facere cupiditate laboriosam fuga aut, sint
+        voluptas explicabo perspiciatis. Vel voluptates explicabo numquam
+        reprehenderit dignissimos ad beatae?
+      </div>
+    </div>
+
+    <script src="./script.js" async></script>
+  </body>
+</html>

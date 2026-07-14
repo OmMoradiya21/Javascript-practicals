@@ -20,54 +20,71 @@
       </p>
     <![endif]-->
 
-    <div class="add-recipe">
+    <form class="add-recipe-form" id="add-recipe-form">
       <label for="recipe-name">Recipe Name:</label>
       <input
         type="text"
-        name="recipe-name"
+        name="recipeName"
         id="recipe-name"
         class="recipe-name"
         placeholder="Enter Recipe Name"
+        required
       />
       <br />
       <label for="recipe-catagory">Recipe Catagory:</label>
       <input
         type="text"
-        name="recipe-catagory"
+        name="recipeCatagory"
         class="recipe-catagory"
         id="recipe-catagory"
         placeholder="Enter Recipe Catagory"
+        required
       />
       <br />
       <label for="recipe-ingredients">Recipe Ingredients:</label>
       <input
         type="text"
-        name="recipe-ingredients"
+        name="recipeIngredients"
         id="recipe-ingredients"
         class="recipe-ingredients"
         placeholder="Enter Recipe Ingredients"
+        required
       />
       <br />
       <label for="recipe-description">Recipe Description:</label>
-      <input
+      <textarea
         type="text"
-        name="recipe-description"
+        name="recipeDescription"
+        rows="4"
+        cols="50"
         id="recipe-description"
         class="recipe-description"
-        placeholder="Enter Recipe Description"
-      />
+        placeholder="Write your recipe..."
+        required
+      ></textarea>
+
       <br />
-      <button>Add Recipe</button>
-    </div>
+      <button type="reset" id="resetBtn">Reset</button>
+      <button type="submit" id="submitBtn">Add Recipe</button>
+    </form>
 
     <div class="search-container">
-      <input type="search" name="search" id="search" class="search" />
-      <button id="search-btn">Search</button>
+      <button id="get-all-recipe-btn">Get All Recipe</button>
+      <input
+        type="search"
+        name="search"
+        id="searchField"
+        class="search"
+        placeholder="Search recipes.."
+        required
+      />
+      <button id="searchBtn">Search</button>
       <div>
         <input
           type="radio"
           name="filter"
           id="searchByName"
+          value="recipeName"
           class="searchByName"
           checked
         />
@@ -77,6 +94,7 @@
         <input
           type="radio"
           name="filter"
+          value="recipeCatagory"
           id="searchByCatagory"
           class="searchByCatagory"
         />
@@ -86,38 +104,14 @@
         <input
           type="radio"
           name="filter"
+          value="recipeIngredients"
           id="searchByIngredients"
           class="searchByIngredients"
         />
         <label for="searchByIngredients">Ingredients</label>
       </div>
     </div>
-    <div class="all-recipe" id="all-recipe">
-      <div class="recipe">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-        necessitatibus in, ut optio facere cupiditate laboriosam fuga aut, sint
-        voluptas explicabo perspiciatis. Vel voluptates explicabo numquam
-        reprehenderit dignissimos ad beatae?
-      </div>
-      <div class="recipe">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-        necessitatibus in, ut optio facere cupiditate laboriosam fuga aut, sint
-        voluptas explicabo perspiciatis. Vel voluptates explicabo numquam
-        reprehenderit dignissimos ad beatae?
-      </div>
-      <div class="recipe">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-        necessitatibus in, ut optio facere cupiditate laboriosam fuga aut, sint
-        voluptas explicabo perspiciatis. Vel voluptates explicabo numquam
-        reprehenderit dignissimos ad beatae?
-      </div>
-      <div class="recipe">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-        necessitatibus in, ut optio facere cupiditate laboriosam fuga aut, sint
-        voluptas explicabo perspiciatis. Vel voluptates explicabo numquam
-        reprehenderit dignissimos ad beatae?
-      </div>
-    </div>
+    <div class="all-recipe" id="all-recipe"></div>
 
     <script src="./script.js" async></script>
   </body>

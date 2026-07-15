@@ -1,0 +1,26 @@
+.taskForm{
+    display: grid;
+  grid-template-columns: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.taskContainer{
+    display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 10px;
+}
+.task{
+width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  text-align: justify;
+}
+.filterBtn{
+  display: flex;
+  justify-content: end;
+  flex-wrap: wrap;
+}

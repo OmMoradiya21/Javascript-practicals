@@ -25,9 +25,9 @@
       <input type="text" name="isCompleted" value="false" style="display: none" />
       <label for="taskTitle">Task Name:</label>
 
-      <input type="text" name="taskTitle" id="taskTitle" /><br />
+      <input type="text" name="taskTitle" id="taskTitle" required maxlength="35"/><br />
       <label for="taskDescription">Task Description: </label>
-      <textarea name="taskDescription" id="taskDescription" rows="3"></textarea>
+      <textarea name="taskDescription" id="taskDescription" rows="3" ></textarea>
       <br />
       <button type="reset" id="resetBtn">Reset</button>
       <button type="submit" id="submitBtn">Add Task</button>

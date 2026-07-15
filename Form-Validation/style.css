@@ -1,0 +1,18 @@
+h1{
+    text-align: center;
+}
+form{
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+}
+input{
+    padding: 10px;
+    border: 2px solid #756ed1;
+    border-radius: 20px;
+}
+
+#status{
+    text-align: center;
+    margin: 30px;
+}

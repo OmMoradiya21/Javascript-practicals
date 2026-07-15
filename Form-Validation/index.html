@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Form Validation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <h1>Registration Form</h1>
+        <div id="status"></div>
+    <form>
+      <label class="name" for="name">Name:</label>
+      <input
+        type="text"
+        id="name"
+        class="name"
+        placeholder="Enter your name"
+        minlength="3"
+      />
+      <br />
+      <label for="email" class="email">Email:</label>
+      <input
+        type="text"
+        class="email"
+        id="email"
+        for="email"
+        placeholder="abc@gmail.com"
+      />
+      <br />
+      <label class="password" for="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        class="password"
+        placeholder="Enter your password"
+        minlength="8"
+        maxlength="25"
+      />
+      <br />
+      <label class="confirmPassword" for="confirmPassword"
+        >Confirm Password:</label
+      >
+      <input
+        type="password"
+        id="confirmPassword"
+        class="confirmPassword"
+        placeholder="Enter your password"
+        minlength="8"
+        maxlength="25"
+      />
+     <br>
+      <button type="submit">Submit</button>
+    </form>
+
+        <script src="./script.js" async defer></script>
+    </body>
+</html>

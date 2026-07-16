@@ -1,0 +1,20 @@
+.todo{
+    
+    width: 100%;
+    max-width: 400px;
+}
+
+.completedTodo{
+    
+    text-decoration: line-through;
+}
+.incompleteTodo{
+display: flex;
+flex-wrap: wrap;
+}
+.container{
+
+    display: flex;
+    flex-wrap: wrap;
+    
+}

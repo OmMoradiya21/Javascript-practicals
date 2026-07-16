@@ -1,18 +1,32 @@
-h1{
-    text-align: center;
+h1 {
+  text-align: center;
 }
-form{
-    display: grid;
-    grid-template-columns: auto;
-    justify-content: center;
+form {
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
 }
-input{
-    padding: 10px;
-    border: 2px solid #756ed1;
-    border-radius: 20px;
+input {
+  padding: 10px;
+  border: 2px solid #756ed1;
+  border-radius: 20px;
 }
 
-#status{
-    text-align: center;
-    margin: 30px;
+.status-valid {
+  max-width: 200px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid rgb(0, 75, 0);
+  background-color: rgb(103, 223, 103);
+  color: rgb(0, 75, 0);
+}
+.status-invalid {
+  max-width: 200px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid rgb(85, 14, 2);
+  background-color: rgb(247, 106, 106);
+  color: rgb(85, 14, 2);
 }

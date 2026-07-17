@@ -7,8 +7,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title> To-Do List Application
-</title>
+        <title>Quiz Application</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./style.css">
@@ -17,15 +16,16 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-<h1>To-Do-App</h1>
-<div class="addTodoContainer">
-        <input type="text" name="todoInput" id="todoInput" class="todoInput">
-        <button type="button" id="addBtn" class="addBtn">Add</button>
-</div>
-        <div class="container" id="container">
+
+        <h1>Quiz Application</h1>
+        <div class="score" id="scoreDiv">Right: <span id="rightScore">0 </span>|| Wrong: <span id="wrongScore">0</span></div>
+
+        <div class="renderQuestionContainer" id="renderQuestionContainer">
 
         </div>
-        
-        <script src="./script.js" async defer></script>
+        <div class="nextBtnDiv">
+        <button class="nextBtn" id="nextBtn" disabled>Next</button>
+        </div>
+        <script src="./script.js" async></script>
     </body>
-</html>
+</html> 

@@ -1,0 +1,18 @@
+h1{
+    text-align: center;
+}
+.score{
+    text-align:end ;
+    margin: 20px 30px;
+}
+.nextBtnDiv{
+    text-align: end;
+    margin: 10px 30px;
+}
+.nextBtn{
+    padding: 5px 10px;
+}
+h2{
+    text-align: center;
+    margin-top: 15%;
+}

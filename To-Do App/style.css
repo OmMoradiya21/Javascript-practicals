@@ -1,20 +1,38 @@
-.todo{
-    
-    width: 100%;
-    max-width: 400px;
+.todo {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  border: 1px solid black;
 }
 
-.completedTodo{
-    
-    text-decoration: line-through;
+.completedTodo {
+  text-decoration: line-through;
 }
-.incompleteTodo{
-display: flex;
-flex-wrap: wrap;
+.incompleteTodo {
 }
-.container{
-
-    display: flex;
-    flex-wrap: wrap;
-    
+p,
+span,
+button {
+  height: fit-content;
+  width: auto;
+  margin: 20px;
+  padding: 10px;
+}
+.container {
+  width: 100%;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.addTodoContainer {
+  display: block;
+}
+input[type="checkbox"] {
+  transform: scale(1.5);
+  height: fit-content;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+button,
+input[type="checkbox"] {
 }

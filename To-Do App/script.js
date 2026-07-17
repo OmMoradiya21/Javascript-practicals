@@ -25,14 +25,15 @@ const renderTodo = (arr) => {
   }
   todoContainer.innerHTML = arr
     .map(
-      ({ id, inputValue, isComplete }) =>
+      ({ id, inputValue, isComplete }, index) =>
         `
-    <li class="todo" id='${id}'>
-    <p class=${isComplete?"completedTodo":"incompleteTodo"}>${inputValue}</p>
+    <div class="todo" id='${id}'>
+    <span>${index + 1}</span>
+    <p class=${isComplete ? "completedTodo" : "incompleteTodo"}>${inputValue}</p>
     <button type="button" onclick="deleteTodo('${id}')">Delete</button>
     <input type="checkbox" id="${id}" ${isComplete ? "checked" : ""} onchange="handleToggle('${id}')"/>
     
-    </li>
+    </div>
     `,
     )
     .join("");

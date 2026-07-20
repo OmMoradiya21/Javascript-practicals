@@ -1,0 +1,19 @@
+.quoteContainer{
+    display: none;
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+    background-color: rgb(250, 242, 231);
+    border: 1px dashed black;
+    border-radius: 10px;
+}
+.header{
+    text-align: center;
+    margin: 50px;
+}
+button{
+    padding: 10px;
+    background-color: aliceblue;
+    border: 1px solid black;
+    border-radius: 10px;
+}

@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.counterContainer{
+    display: flex;
+    height: 200px;
+    width: 200px;
+    margin: 20px auto;
+    border: 3px solid rgb(138, 193, 230);
+    border-radius: 50%;
+    background-color:rgb(39, 38, 38) ;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    font-size: 100px;
+}
+.inputCountdownContainer{
+    text-align: center;
+    margin: 30px;
+}
+input,button{
+    padding: 5px 10px;
+    margin: 5px;
+}

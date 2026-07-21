@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Dynamic Form Builder</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <h1>Dynamic Form Builder</h1>
+        <div class="formGeneratorDiv">
+            <label for="inputLabelName">Enter Label Name : </label>
+            <input type="text" name="inputLabelName" id="inputLabelName" required minlength="2" maxlength="20">
+            <div class="inputTypeSelectorDiv">
+                <label for="inputTypeSelector">Input Type :</label>
+                <select name="inputTypeSelector" id="inputTypeSelector">
+                    <option value="text" selected>Text</option>
+                    <option value="number">Number</option>
+                    <option value="email">Email</option>
+                    <option value="password">Password</option>
+                    <option value="checkbox">Checkbox</option>
+                    <option value="radio">Radio</option>
+                </select>
+            </div>
+            <div id="multipleChoicesDiv" class="multipleChoicesDiv">
+                <label for="inputMultipleChoices">Enter Choices:</label>
+                <input type="text" name="inputMultipleChoices" id="inputMultipleChoices" required placeholder="ex : a,b,c">
+            </div>
+            <button type="button" id="addBtn">Add</button>
+        </div>
+        <form id="form" class="form">
+            <div class="formContainer" id="formContainer">
+
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <script src="./script.js" async defer></script>
+    </body>
+</html>

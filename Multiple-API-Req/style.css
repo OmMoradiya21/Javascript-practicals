@@ -1,0 +1,14 @@
+table{
+    display: none;
+}
+th,
+td {
+  border: 1px solid black;
+  padding: 10px;
+}
+table {
+  border-collapse: collapse;
+}
+#fetchBtn{
+    margin: 20px;
+}

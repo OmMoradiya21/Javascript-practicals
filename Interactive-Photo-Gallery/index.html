@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Dynamic Form Builder</title>
+    <title>Interactive Photo Gallery</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./style.css" />
@@ -19,15 +19,20 @@
         <a href="#">upgrade your browser</a> to improve your experience.
       </p>
     <![endif]-->
-
-    <h1>Dynamic Form Builder</h1>
-    <div class="formGeneratorDiv">
-      <button type="button" id="addBtn" class="addBtn">Add</button>
+    <h1>Interactive Photo Gallery</h1>
+    <div class="addPhotoDiv">
+      <form id="form">
+        <label for="photoURL">Add Photo: </label>
+        <input
+          type="url"
+          required
+          id="photoURL"
+          placeholder="https://www.image/abc"
+        />
+        <button type="submit" class="addBtn" id="addBtn">Add</button>
+      </form>
     </div>
-    <form id="form" class="form">
-      <div class="formContainer" id="formContainer"></div>
-      <button type="submit" class="submitBtn" >Submit</button>
-    </form>
+    <div class="photoesContainer" id="photoesContainer"></div>
     <script src="./script.js" async defer></script>
   </body>
 </html>

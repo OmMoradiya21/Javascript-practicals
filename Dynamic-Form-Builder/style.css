@@ -1,9 +1,28 @@
-.multipleChoicesDiv{
-    display: none; 
+.form {
+  display: none;
+  width: fit-content;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 15px;
 }
-.form{
-    display: none;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+.submitBtn {
+  margin-top: 20px;
+}
+h1 {
+  text-align: center;
+}
+.addBtn {
+  display: flex;
+  margin: 0 auto;
+  padding: 5px 10px;
+  background-color: aliceblue;
+  border: 1px solid rgb(144, 144, 231);
+}
+input {
+  margin-bottom: 10px;
 }

@@ -1,38 +1,65 @@
 .todo {
   display: flex;
-  width: 100%;
-  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
   border: 1px solid black;
+  border-radius: 12px;
+  padding: 14px 16px;
+  background: white;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 .completedTodo {
   text-decoration: line-through;
+  color: #94a3b8;
 }
 .incompleteTodo {
+  color: #0f172a;
+  font-weight: 600;
 }
 p,
 span,
 button {
-  height: fit-content;
-  width: auto;
-  margin: 20px;
-  padding: 10px;
+  margin: 0;
+  padding: 0;
 }
 .container {
   width: 100%;
-  display: inline-flex;
+  max-width: 700px;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 10px;
+  align-items: stretch;
 }
-.addTodoContainer {
-  display: block;
+.inputContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto 24px;
+  max-width: 600px;
+  flex-wrap: wrap;
 }
 input[type="checkbox"] {
   transform: scale(1.5);
-  height: fit-content;
-  margin-top: 30px;
-  margin-left: 20px;
+  margin: 0;
+  cursor: pointer;
 }
-button,
-input[type="checkbox"] {
+button {
+  padding: 8px 10px;
+  border: 1px solid black;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #ffffff;
+  color: #000000;
+}
+.todoInput {
+  padding: 6px;
+  font-size: 14px;
 }

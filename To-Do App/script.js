@@ -20,7 +20,7 @@ const deleteTodo = (todoId) => {
 
 const renderTodo = (arr) => {
   if (arr.length === 0) {
-    todoContainer.innerHTML = `<h2> No To-Do Exist.</h2>`;
+    todoContainer.innerHTML = "";
     return;
   }
   todoContainer.innerHTML = arr
@@ -28,7 +28,7 @@ const renderTodo = (arr) => {
       ({ id, inputValue, isComplete }, index) =>
         `
     <div class="todo" id='${id}'>
-    <span>${index + 1}</span>
+    <span class=${isComplete ? "completedTodo" : "incompleteTodo"}>${index + 1}</span>
     <p class=${isComplete ? "completedTodo" : "incompleteTodo"}>${inputValue}</p>
     <button type="button" onclick="deleteTodo('${id}')">Delete</button>
     <input type="checkbox" id="${id}" ${isComplete ? "checked" : ""} onchange="handleToggle('${id}')"/>

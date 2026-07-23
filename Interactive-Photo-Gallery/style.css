@@ -1,35 +1,37 @@
-.addPhotoDiv{
-    display: flex;
-    justify-content: center;
+.addPhotoDiv {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
 }
-h1{
-    display: flex;
-    justify-content: center;
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
 }
-.photoesContainer{
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    
-    margin: 0;
-    
+.photoesContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  align-items: start;
 }
-.photoesContainer > div{
-    width: auto;
-    height: auto;
-    max-width: 200px;
-    max-height: auto;
+.photoesContainer > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-img{
-    height: auto;
-    width: auto;
-    max-width: 200px;
-    max-height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
+
+
+img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
 }
-button{
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 5px 10px;
-    margin: 2px;
+button {
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 6px 10px;
+  margin-top: 8px;
+  cursor: pointer;
+  background: white;
 }

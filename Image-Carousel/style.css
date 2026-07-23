@@ -1,8 +1,8 @@
 .image-corousel {
-  max-width: 100%;
-  position: relative;
-  margin:auto;
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 .slide {
   display: none;
@@ -17,18 +17,20 @@
   padding: 15px;
   color: rgb(0, 0, 0);
   font-weight: bold;
-  font-size: 40px;
+  font-size: 30px;
   user-select: none;
   border-radius: 0 3px 3px 0;
+  border: 1px solid black;
 }
 .next{
     right: 0;
+    margin-right: 10px;
  border-radius: 3px 0 0 3px;
 }
-img{
-    object-fit: cover; 
-    height: 98vh;
-    width: 112vh;
-    justify-content: center;
-    align-items: center;
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
 }

@@ -1,49 +1,39 @@
 const prevBtn = document.getElementById("prev");
 const nxtBtn = document.getElementById("next");
+const slides = document.getElementsByClassName("slide");
 
-let prevIndex = -1;
-let nextIndex = 1;
-let slideIndex = 0;
+let currentIndex = 0;
 let intervalId = null;
 
 const showSlide = (index) => {
-  let slides = document.getElementsByClassName("slide");
+  currentIndex = index;
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  console.log("index", index);
-  if (index < 0) {
-    index = slides.length - 1;
-    prevIndex = slides.length - 1;
-  }
-  if (index > slides.length - 1) {
-    index = 0;
-    slideIndex = 0;
-  }
-  nextIndex = index;
+  console.log(index);
   slides[index].style.display = "block";
   console.log("slide no.", index);
 };
 const slideShow = () => {
-  prevIndex = slideIndex;
-
-  slideIndex++;
-  showSlide(slideIndex - 1);
-  console.log("slide index in interval", slideIndex);
+  // handle circulation of slide
+  const nextIndex = (currentIndex + 1) % slides.length;
+  showSlide(nextIndex);
 };
 
-intervalId = setInterval(slideShow, 5000);
 
 prevBtn.addEventListener("click", () => {
   clearInterval(intervalId);
-  prevIndex--;
+  const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
   showSlide(prevIndex);
   intervalId = setInterval(slideShow, 5000);
 });
 
 nxtBtn.addEventListener("click", () => {
   clearInterval(intervalId);
-  nextIndex++;
+  const nextIndex = (currentIndex + 1) % slides.length;
   showSlide(nextIndex);
   intervalId = setInterval(slideShow, 5000);
 });
+
+showSlide(currentIndex);
+intervalId = setInterval(slideShow, 5000);

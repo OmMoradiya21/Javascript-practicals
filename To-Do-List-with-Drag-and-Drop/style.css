@@ -1,0 +1,73 @@
+.todo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border: 1px solid black;
+  border-radius: 12px;
+  padding: 14px 16px;
+  background: white;
+  cursor: pointer;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.completedTodo {
+  text-decoration: line-through;
+  color: #1c2127;
+}
+.incompleteTodo {
+  color: #000000;
+  font-weight: 600;
+}
+p,
+span,
+button {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: stretch;
+  /* border: 1px solid black; */
+  padding: 10px;
+  border-radius: 12px;
+}
+.inputContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto 24px;
+  max-width: 600px;
+  flex-wrap: wrap;
+}
+input[type="checkbox"] {
+  transform: scale(1.5);
+  margin: 0;
+  cursor: pointer;
+}
+button {
+  padding: 8px 10px;
+  border: 1px solid black;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #ffffff;
+  color: #000000;
+}
+.todoInput {
+  padding: 6px;
+  font-size: 14px;
+}
+
+.dragging {
+  opacity: 0.7;
+}

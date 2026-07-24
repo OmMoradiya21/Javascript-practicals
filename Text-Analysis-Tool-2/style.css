@@ -1,0 +1,32 @@
+.input-container{
+    text-align: center;
+}
+.response{
+    display: flex;
+  
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+input, button{
+  padding: 10px;
+  border-radius: 12px;
+}
+p{
+  text-align: center;
+}
+button{
+  margin-left: 10px;
+  background-color: rgb(175, 250, 100);
+}
+.card{
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 12px;
+  background-color: rgb(235, 248, 248);
+}
+.response > :first-child {
+  background-color: rgb(106, 217, 236);
+}

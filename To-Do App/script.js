@@ -14,7 +14,17 @@ const handleToggle = (todoId) => {
 };
 
 const deleteTodo = (todoId) => {
-  allTodos = allTodos.filter(({ id }) => id !== todoId);
+  const todo = allTodos.find(({ id }) => id === todoId);
+  if (!todo.isComplete) {
+    const confirm = window.confirm(
+      "To-Do is not complete. Are you sure to delete it?",
+    );
+    if (confirm) {
+      allTodos = allTodos.filter(({ id }) => id !== todoId);
+    }
+  } else {
+    allTodos = allTodos.filter(({ id }) => id !== todoId);
+  }
   renderTodo(allTodos);
 };
 
@@ -41,6 +51,10 @@ const renderTodo = (arr) => {
 
 const addTodo = () => {
   const inputValue = todoInput.value.trim();
+  if (inputValue === "") {
+    alert("Please Enter To-Do..");
+    return;
+  }
   const todo = {
     id: crypto.randomUUID(),
     inputValue: inputValue,

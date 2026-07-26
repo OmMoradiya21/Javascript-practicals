@@ -29,7 +29,6 @@ const editRecipe = (recipeId) => {
       inputElement.value = recipe[key];
     }
   });
-  submitBtn.textContent = "Edit Recipe";
 };
 
 const renderRecipes = (arr) => {
@@ -86,7 +85,6 @@ const addRecipe = (e) => {
   localStorage.setItem("allRecipe", JSON.stringify(allRecipesParse));
   renderRecipes(allRecipesParse);
   resetBtn.click();
-  submitBtn.textContent = "Add Recipe";
 };
 
 const searchRecipes = () => {
@@ -133,5 +131,13 @@ searchField.addEventListener("keypress", function (e) {
   if (e.key === "Enter") {
     e.preventDefault();
     searchRecipes();
+  }
+});
+
+form.addEventListener("reset",()=>{
+  const recipeId = localStorage.getItem("recipeId");
+  if (recipeId) {
+    console.log("reset clicked");
+    localStorage.removeItem("recipeId");
   }
 });

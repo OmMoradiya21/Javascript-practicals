@@ -4,6 +4,10 @@ const response = document.getElementById("response");
 
 const anlyzeText = () => {
   const text = intputText.value;
+  if (text === "" || text.trim() === ""){
+    alert('please enter somthing..');
+    return;
+  }
   const words = text.split(/\s+/);
   console.log(words);
   const wordCount = words.length;

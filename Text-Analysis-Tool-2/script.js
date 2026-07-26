@@ -4,6 +4,10 @@ const response = document.getElementById("response");
 
 const anlyzeText = () => {
   const text = intputText.value;
+  if (text === "" || text.trim() === ""){
+    alert('please enter somthing..');
+    return;
+  }
   const totalChar = text.length;
   const cleanedText = text.replace(/[^\w\s+]/g, "");
   const words = cleanedText.trim().split(/\s+/);
@@ -32,7 +36,7 @@ const anlyzeText = () => {
     <h4> Total Word: ${wordCount} </h4>
     <h4> Average word length: ${averageWordLength}</h4>
     <h4> common words (top 3): ${topFrequentWords
-      .splice(0,3)
+      .slice(0,3)
       .map(([key, value]) => `<p>${key}: ${value}</p>`)
       .join("")}
       </h4>

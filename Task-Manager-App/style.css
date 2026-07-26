@@ -24,3 +24,9 @@ width: 100%;
   justify-content: end;
   flex-wrap: wrap;
 }
+h1{
+  text-align: center;
+}
+button{
+  margin: 5px;
+}

@@ -101,3 +101,7 @@ incompleteTaskBtn.addEventListener("click", function () {
   );
   renderTasks(incompleteTasks);
 });
+
+form.addEventListener("reset", () => {
+  submitBtn.textContent = "Add Task";
+});

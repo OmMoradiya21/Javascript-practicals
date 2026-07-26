@@ -1,7 +1,7 @@
 const tbody = document.getElementById("tbody");
 const fetchBtn = document.getElementById("fetchBtn");
 const table = document.getElementById("tb");
-let data;
+let userData;
 
 const renderTable = (arr) => {
   const renderArr = arr
@@ -24,14 +24,18 @@ const renderTable = (arr) => {
 
 const handleFetch = async () => {
   try {
-    const userRes1 = await fetch("https://jsonplaceholder.typicode.com/users");
-    const users1 = await userRes1.json();
-    const userRes2 = await fetch("https://dummyjson.com/users");
-    const users2 = await userRes2.json();
+    console.time("total time");
+    const [userData1, userData2] = await Promise.all([
+      fetch("https://jsonplaceholder.typicode.com/users").then((res) =>
+        res.json(),
+      ),
+      fetch("https://dummyjson.com/users").then((res) => res.json()),
+    ]);
+    console.timeEnd("total time");
 
-    data = [...users1, ...users2["users"]];
-    console.log("data fetched", data);
-    renderTable(data);
+    userData = [...userData1, ...userData2["users"]];
+    console.log("data fetched", userData);
+    renderTable(userData);
   } catch (e) {
     console.log(e);
   }

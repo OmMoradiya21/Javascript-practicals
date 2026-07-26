@@ -119,7 +119,7 @@ const renderQuestionContainer = document.getElementById(
 );
 const scoreDiv = document.getElementById("scoreDiv");
 
-const status = {};
+const result = {};
 let currentQuestionIndex = 0;
 const totalQuestion = quizQuestions.length;
 
@@ -127,7 +127,7 @@ const countScore = () => {
   console.log("renderStatus");
   let rightAns = 0;
   let wrongAns = 0;
-  Object.values(status).forEach((val) => {
+  Object.values(result).forEach((val) => {
     if (val === "true") {
       rightAns += 1;
     } else {
@@ -141,7 +141,7 @@ const updateStatus = (radio) => {
   console.log("updateStatus");
   const id = radio.name;
   const value = radio.value;
-  status[id] = value;
+  result[id] = value;
   console.log(typeof value);
   console.log(countScore());
   const { rightAns, wrongAns } = countScore();

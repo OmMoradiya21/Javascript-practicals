@@ -1,6 +1,42 @@
 h1{
     text-align: center;
 }
+
+.renderQuestionContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.question {
+    width: min(90%, 500px);
+    padding: 24px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    text-align: left;
+    background-color: aliceblue;
+}
+
+.question p {
+    margin-top: 0;
+    font-weight: 600;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 12px 0;
+}
+
+.option label {
+    cursor: pointer;
+}
+
+.renderQuestionContainer h2 {
+    text-align: center;
+}
+
 .score{
     text-align:end ;
     margin: 20px 30px;
@@ -13,6 +49,5 @@ h1{
     padding: 5px 10px;
 }
 h2{
-    text-align: center;
     margin-top: 15%;
 }

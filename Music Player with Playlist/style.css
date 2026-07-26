@@ -1,0 +1,150 @@
+h1 {
+  line-height: 40px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+ul {
+  margin: 0;
+}
+
+.container {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 450px 450px;
+  grid-template-rows: auto;
+  grid-template-areas: "player playlist";
+  gap: 10px;
+  justify-content: center;
+  align-items: start;
+}
+
+.player,
+.playlist {
+  border: 3px solid #000000;
+}
+
+.player {
+  height: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 10px;
+}
+.title,
+.playlist-title {
+  margin: 0 auto;
+}
+
+.playerContent {
+  display: flex;
+  background-color: rgb(40, 48, 17);
+  width: 430px;
+  height: 200px;
+  column-gap: 13px;
+  align-items: center;
+  justify-content: center;
+}
+
+#playerAlbum img {
+  width: 150px;
+  display: block;
+}
+
+.playerDisplay {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  padding: 14px;
+  height: 153px;
+  width: 226px;
+  color: black;
+}
+
+.playerBtn {
+  display: flex;
+  justify-content: space-around;
+}
+.playerBtn svg {
+  fill: white;
+}
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+button:focus,
+.playlistSong:focus {
+  outline-style: solid;
+  outline-width: 2px;
+}
+
+
+.playlist {
+  height: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+}
+
+#playlistSongs {
+  width: 430px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  padding: 8px 9px;
+  visibility: visible;
+  justify-content: start;
+  list-style: none;
+}
+
+.playlistSong {
+  display: flex;
+  height: 55px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+.deleteBtn {
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+  border-radius: 2px;
+  background-color: rgb(233, 153, 153);
+}
+.deleteBtn:hover {
+  background-color: red;
+}
+#addSongBtn {
+  border: 1px solid;
+}
+.addSongDiv {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 0 0;
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  align-items: center;
+  column-gap: 6px;
+  row-gap: 8px;
+}
+input {
+  margin: 0;
+  width: 90%;
+  box-sizing: border-box;
+}
+#addSongBtn {
+  grid-column: 1 / -1;
+  justify-self: center;
+}

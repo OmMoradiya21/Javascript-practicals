@@ -20,6 +20,7 @@ const handleGuess = () => {
   attemptsCount++;
   if (randomNum === guessedNum) {
     // show attempts and play again
+    guessBtn.style.backgroundColor = "green";
     const confirm = window.confirm(
       `you win with ${attemptsCount} attempts. would you like to play again?`,
     );
@@ -27,6 +28,7 @@ const handleGuess = () => {
       attemptsCount = 0;
       randomNum = Math.floor(Math.random() * 100) + 1;
       console.log("random number", randomNum);
+      guessBtn.style.backgroundColor = "aliceblue";
     }
   }
   attempts.textContent = attemptsCount;

@@ -1,0 +1,28 @@
+.inputDiv{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 50px;  
+    border: 1px solid;
+    padding: 30px;
+    
+}
+label, input{
+    display: flex;
+    margin: 0 10px;
+    align-items: center;
+}
+#guessBtn{
+    padding: 2px;
+    background-color: aliceblue;
+}
+
+.resultAndHint{
+    text-align: center;
+    border: 1px solid;
+    padding: 20px 30px;
+    margin: 50px; 
+}
+#hintBtn{
+    margin: 20px;
+}

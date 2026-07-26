@@ -6,6 +6,7 @@ let timer;
 let intervalId;
 
 const handleCounter = () => {
+  startBtn.disabled = true;
   timer = Number(input.value);
   if (timer === 0){
     return;
@@ -17,6 +18,7 @@ const handleCounter = () => {
       counterContainer.textContent = timer;
     }
   intervalId = setInterval(() => {
+    
     timer--;
     console.log(timer);
     if (Math.floor(timer /10) === 0 ) {
@@ -25,6 +27,7 @@ const handleCounter = () => {
       counterContainer.textContent = timer;
     }
     if (timer === 0) {
+      startBtn.disabled = false;
       console.log("timer stopped");
       alert("Timer Done.");
       clearInterval(intervalId);

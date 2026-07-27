@@ -1,0 +1,35 @@
+.displayMatrix{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+h1{
+    text-align: center;
+}
+h2{
+    margin-left: 20px;
+}
+.filter{
+    margin: 30px 0;
+}
+.displayMatrix > div{
+    border: 1px solid;
+    padding: 5px;
+    text-align: center;
+    border-radius: 7px;
+
+}
+.chart{
+    height: 600px;
+    max-width: 1000px;
+    min-width: 500px;
+}
+select{
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+label{
+    margin-left: 20px;
+}

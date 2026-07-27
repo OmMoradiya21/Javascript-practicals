@@ -1,0 +1,61 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Data Analysis Dashboard</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0"></script>
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+    <h1>Data Analysis Dashboard</h1>
+    <h2>Yearly Profit:</h2>
+    <div class="displayMatrix">
+        <div class="sum">
+          <h3>Total: $<span id="sum">0</span></h3>
+        </div>
+      <div class="average">
+        <h3>Average: $<span id="average">0</span></h3>
+      </div>
+      <div class="min">
+        <h3>Minimum: $<span id="minimum">0</span></h3>
+      </div>
+      <div class="max">
+        <h3>Maximum: $<span id="maximum">0</span></h3>
+      </div>
+    </div>
+
+    <div class="filter">
+      <label for="chartNames"><strong>Filter By:</strong> Chart Name: </label>
+      <select name="filter" id="chartNames">
+        <option value="profitVsMonth" selected>Profit vs Month</option>
+        <option value="sellsVsMonth">Sells vs Month</option>
+        <option value="profitVsSells">Profit vs Sells</option>
+      </select>
+      <label for="chartType">Chart Type:</label>
+      <select name="chartType" id="chartType">
+        <option value="bar">Bar</option>
+        <option value="line">Line</option>
+        <option value="pie">Pie</option>
+        <option value="doughnut">Doughnut</option>
+      </select>
+    </div>
+    <div class="chart" id="chart">
+      <canvas id="ctx"></canvas>
+    </div>
+
+    <script src="./script.js" async defer></script>
+  </body>
+</html>

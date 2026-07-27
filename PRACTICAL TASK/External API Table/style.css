@@ -1,4 +1,6 @@
-
+h1{
+  margin-left:200px;
+}
 
 table {
       border-collapse: collapse;
@@ -7,4 +9,10 @@ table {
     td {
       border: 1px solid;
       padding: 10px;
+    }
+    input{
+      margin: 30px 180px;
+      border: 1px solid;
+      padding: 5px;
+      border-radius: 5px;
     }

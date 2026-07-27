@@ -30,3 +30,23 @@ h1{
 button{
   margin: 5px;
 }
+input,textarea{
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+}
+button{
+  padding: 5px;
+  margin: 5px;
+  background-color: rgb(237, 242, 247);
+  border-radius: 5px;
+}
+fieldset{
+  margin: 20px;
+}
+.taskContainer > div{
+  border: 1px solid;
+  border-radius: 10px;
+  gap: 10px;
+padding: 10px;
+}

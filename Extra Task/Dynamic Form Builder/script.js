@@ -3,50 +3,32 @@ const formContainer = document.getElementById("formContainer");
 const addBtn = document.getElementById("addBtn");
 
 const appendInputField = (labelName, inputType) => {
-  let n = prompt("Enter number of input wants:", 1);
-
-  if (!n || n < 1) {
-    alert("negative number not Valid or Input not entered.");
-    return;
-  }
-  n = Math.floor(Number(n));
-  for (let i = 1; i <= n; i++) {
-    formContainer.innerHTML += `
+  formContainer.innerHTML += `
     <label for=${labelName}>${labelName} : </label>
     <input type=${inputType} id=${labelName} required />
     <br>
     `;
-  }
 };
 
 const appendMultiChoiceInputField = (labelName, inputType, choices) => {
   const choicesArr = choices.split(",");
   console.log(choicesArr);
 
-  let n = prompt("Enter number of input wants:", 1);
-
-  if (!n || n < 1) {
-    alert("negative number not Valid or Input not entered.");
-    return;
-  }
-  n = Math.floor(Number(n));
-  for (let i = 1; i <= n; i++) {
-    formContainer.innerHTML += `
+  formContainer.innerHTML += `
     <label >${labelName} : </label>
     ${choicesArr
       .map(
         (choice) => `
-        <input type=${inputType} name=${labelName + i} value=${choice.trim() + i} id=${choice.trim() + i} />
-        <label for=${choice.trim() + i} >${choice.trim()}</label>
+        <input type=${inputType} name=${labelName} value=${choice.trim()} id=${choice.trim()} />
+        <label for=${choice.trim()} >${choice.trim()}</label>
         `,
       )
       .join("")}
     <br>
     `;
-  }
 };
 
-const handleAddBtn = () => {
+const addField = () => {
   let labelName = prompt("Enter Label Name: ");
   if (!labelName || labelName.trim().length <= 2) {
     alert("Label Name should more than 2 character.");
@@ -100,8 +82,19 @@ const handleAddBtn = () => {
   form.style.display = "block";
 };
 
+const handleAddBtn = () => {
+  let numberOfFields = prompt("How many fields you want?", 1);
+  if (!numberOfFields || Math.floor(numberOfFields) < 1 || Math.floor(numberOfFields) > 10) {
+    alert("Enter appropriate number or number should between 1 to 10");
+    return;
+  }
+  numberOfFields = Math.floor(numberOfFields);
+
+  for (let i = 1; i <= numberOfFields; i++) {
+    addField();
+  }
+};
+
 addBtn.addEventListener("click", handleAddBtn);
-submitBtn.addEventListener("submit", () => {
-  alert("Form submitted.");
-});
-form.addEventListener("submit",()=>alert("Form Submitted Successfully."));
+
+form.addEventListener("submit", () => alert("Form Submitted Successfully."));

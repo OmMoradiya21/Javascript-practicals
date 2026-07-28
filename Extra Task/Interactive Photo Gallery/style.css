@@ -35,3 +35,10 @@ button {
   cursor: pointer;
   background: white;
 }
+
+input{
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 0 10px;
+}

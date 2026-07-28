@@ -24,6 +24,7 @@ ul {
 .player,
 .playlist {
   border: 3px solid #000000;
+  background-color: aliceblue;
 }
 
 .player {
@@ -35,9 +36,11 @@ ul {
   justify-content: center;
   row-gap: 10px;
 }
-.title,
+.title {
+  margin-left: 10px;
+}
 .playlist-title {
-  margin: 0 auto;
+  margin: 5px auto;
 }
 
 .playerContent {
@@ -74,17 +77,15 @@ ul {
 }
 button {
   background: transparent;
-  border: none;
+ 
   cursor: pointer;
   text-align: center;
 }
 
-button:focus,
-.playlistSong:focus {
-  outline-style: solid;
-  outline-width: 2px;
+.playlist li:active,
+.playlist li:focus {
+  background-color: rgb(255, 255, 146);
 }
-
 
 .playlist {
   height: auto;
@@ -116,12 +117,13 @@ button:focus,
 }
 
 .deleteBtn {
-  padding: 0;
-  width: 20px;
-  height: 20px;
+  width: auto;
+  height: auto;
+  padding: 5px;
   border: 1px solid black;
   border-radius: 2px;
   background-color: rgb(233, 153, 153);
+  margin-right: 15px;
 }
 .deleteBtn:hover {
   background-color: red;
@@ -141,10 +143,27 @@ button:focus,
 }
 input {
   margin: 0;
-  width: 90%;
+  width: 250px;
   box-sizing: border-box;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 7px;
 }
 #addSongBtn {
   grid-column: 1 / -1;
   justify-self: center;
+  border: 1px solid;
+  padding: 7px;
+  border-radius: 5px;
+  background-color: white;
+}
+#songTitle {
+  color: aliceblue;
+  margin: 20px;
+}
+
+li {
+  border: 1px solid;
+  border-radius: 5px;
+  background-color: white;
 }

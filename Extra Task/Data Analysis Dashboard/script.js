@@ -145,6 +145,7 @@ const createCharts = ({ xValues, yValues }, chartType, chartName) => {
           },
         },
         y: {
+          
           title: {
             display: true,
             text: yName.toUpperCase(),

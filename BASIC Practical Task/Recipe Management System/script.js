@@ -48,13 +48,13 @@ const renderRecipes = (arr) => {
       }) =>
         `<div id=${id} class="recipe">
             <button type="button" onclick="editRecipe('${id}')">Edit</button>
-            <button type="button" onclick="deleteRecipe('${id}')">Delete</button>
+            <button type="button" class="deleteBtn" onclick="deleteRecipe('${id}')">Delete</button>
             <br/>
             <h2>${recipeName}</h2>
-            <p>catagory: ${recipeCatagory}</p>
-            <p>Ingredients: ${recipeIngredients}</p>
+            <p><b>catagory:</b> ${recipeCatagory}</p>
+            <p><b>Ingredients:</b> ${recipeIngredients}</p>
         
-            <p>Description :</p>
+            <p><b>Description :</b></p>
             <p>${recipeDescription}</p>
         </div>`,
     )

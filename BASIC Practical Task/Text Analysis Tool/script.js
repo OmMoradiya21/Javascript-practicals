@@ -11,7 +11,7 @@ const anlyzeText = () => {
   const words = text.split(/\s+/);
   console.log(words);
   const wordCount = words.length;
-  const totalChar = text.replace(/\s/g, "").length;
+  const totalChar = text.length;
   const wordFreq = {};
 
   for (let word of words) {

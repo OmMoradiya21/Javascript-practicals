@@ -8,46 +8,30 @@ const inputSongURL = document.getElementById("songURL");
 
 const allSongs = [
   {
-    id: 5,
-    title: "Chase",
-    src: "./songs/chase.mp3",
-  },
-  {
-    id: 6,
-    title: "The Army of Minotaur",
-    src: "./songs/The-Army-of-Minotaur(chosic.com).mp3",
-  },
-  {
-    id: 7,
-    title: "Saga of Knight",
-    src: "./songs/Saga-of-Knight(chosic.com).mp3",
-  },
-  {
-    id: 0,
+    id: 1,
     title: "Scratching The Surface",
     src: "https://cdn.freecodecamp.org/curriculum/js-music-player/scratching-the-surface.mp3",
   },
   {
-    id: 1,
+    id: 2,
     title: "Can't Stay Down",
     src: "https://cdn.freecodecamp.org/curriculum/js-music-player/can't-stay-down.mp3",
   },
   {
-    id: 2,
+    id: 3,
     title: "Still Learning",
     src: "https://cdn.freecodecamp.org/curriculum/js-music-player/still-learning.mp3",
   },
   {
-    id: 3,
+    id: 4,
     title: "Cruising for a Musing",
     src: "https://cdn.freecodecamp.org/curriculum/js-music-player/cruising-for-a-musing.mp3",
   },
   {
     id: 4,
     title: "Never Not Favored",
-    src: "https://cdn.freecodecamp.org/curriculum/js-music-player/never-not-favored.mp3",
+    src: "",
   },
-  
 ];
 
 const music = new Audio();
@@ -67,7 +51,8 @@ const shuffle = () => {
   console.log("shuffle success.");
 };
 
-const deleteSong = (id) => {
+const deleteSong = (e, id) => {
+  e.stopPropagation();
   if (currentSong?.id === id) {
     currentSong = null;
     songTime = 0;
@@ -75,36 +60,34 @@ const deleteSong = (id) => {
     pauseSong();
     displayInfo();
     const playingSong = document.getElementById("songTitle");
-    const songArtist = document.getElementById("songArtist");
     playingSong.textContent = "";
-    songArtist.textContent = "";
   }
   songs = songs.filter((song) => song.id !== id);
   renderSongs(songs);
-  console.log("song deleted..")
+  console.log("song deleted..");
 };
 
 const displayInfo = () => {
   const playingSong = document.getElementById("songTitle");
-  const songArtist = document.getElementById("songArtist");
   const title = currentSong?.title;
-  const artist = currentSong?.artist;
 
   playingSong.textContent = title ? title : "";
-  songArtist.textContent = artist ? artist : "";
 };
 
 const playSong = (id) => {
   console.log("playsong function.");
   const song = songs.find((song) => song.id === id);
+  console.log(song);
+
   music.src = song.src;
   music.title = song.title;
-console.log(song?.title);
+  console.log(song?.title);
   if (currentSong === null || currentSong.id !== song.id) {
     music.currentTime = 0;
   } else {
     music.currentTime = songTime;
   }
+
   currentSong = song;
   music.play();
   displayInfo();
@@ -113,6 +96,7 @@ console.log(song?.title);
 const pauseSong = () => {
   songTime = music.currentTime;
   music.pause();
+  console.log("song paused.");
 };
 const playNextSong = () => {
   if (currentSong === null) {
@@ -129,13 +113,9 @@ const renderSongs = (arr) => {
   const songsRender = arr
     .map(
       ({ id, title }) => `
-    <li id="song-${id}" class="playlistSong">
-      <button class="info" onclick="playSong(${id})">
-          <span class="title">${title}</span>
-      </button>
-      <button onclick="deleteSong(${id})" class="deleteBtn">
-          x
-        </button>
+    <li id="song-${id}" class="playlistSong" onclick="playSong(${id})">
+      <span class="title">${title}</span>
+      <button onclick="deleteSong(event, ${id})" class="deleteBtn">Delete</button>
       </li>
     `,
     )
@@ -189,6 +169,8 @@ const addSong = () => {
   songs.unshift(newSong);
   console.log("song added succesfully");
   renderSongs(songs);
+  inputSongName.value = "";
+  inputSongURL.value = "";
 };
 
 playButton.addEventListener("click", () => {

@@ -25,4 +25,7 @@ h1 {
 }
 input {
   margin-bottom: 10px;
+  border: 1px solid;
+  padding: 5px;
+  border-radius: 5px;
 }

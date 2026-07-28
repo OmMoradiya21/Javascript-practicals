@@ -25,7 +25,29 @@
   max-width: 500px;
   padding: 10px;
   text-align: justify;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: rgb(243, 241, 239);
 }
 h1{
   text-align: center;
+}
+input,textarea{
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 5px;
+  margin: 5px;
+}
+button{
+  padding: 5px;
+  border: 1px solid;
+  border-radius: 5px;
+  background-color: aliceblue;
+  margin: 5px;
+}
+.deleteBtn{
+  background-color: rgb(224, 141, 141);
+}
+input[type=radio],label{
+  margin-top: 10px;
 }

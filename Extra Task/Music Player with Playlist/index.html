@@ -4,9 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>
-      Music Player with Playlist
-    </title>
+    <title>Music Player with Playlist</title>
   </head>
 
   <body>
@@ -24,7 +22,6 @@
           <div class="playerDisplay">
             <div>
               <p id="songTitle"></p>
-              <p id="songArtist"></p>
             </div>
             <div class="playerBtn">
               <button id="play" class="play">
@@ -38,7 +35,7 @@
                   <path d="M0 0L16.1852 9.5L1.88952e-07 19L0 0Z" />
                 </svg>
               </button>
-              <button id="pause" class="pause" >
+              <button id="pause" class="pause">
                 <svg
                   width="17"
                   height="19"
@@ -51,7 +48,7 @@
                 </svg>
               </button>
 
-              <button id="shuffle" class="shuffle" >
+              <button id="shuffle" class="shuffle">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -75,10 +72,22 @@
           </div>
         </div>
         <div class="addSongDiv">
-          <label for="songName">Enter Song Name:</label>
-          <input type="text" name="songName" id="songName" />
-          <label for="songURL">Enter Song URL:</label>
-          <input type="url" name="songURL" id="songURL" />
+          <label for="songName">Song Name:</label>
+          <input
+            type="text"
+            name="songName"
+            id="songName"
+            placeholder="Enter Song Name"
+            required
+          />
+          <label for="songURL">Song URL:</label>
+          <input
+            type="url"
+            name="songURL"
+            id="songURL"
+            placeholder="Enter Song URL"
+            required
+          />
           <button id="addSongBtn">Add Song</button>
         </div>
       </div>

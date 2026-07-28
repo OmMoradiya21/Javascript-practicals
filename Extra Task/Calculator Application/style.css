@@ -9,6 +9,9 @@ input{
     margin: 10px;
     width: 60px;
     font-size: large;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 5px;
 }
 label{
     font-family: 'Courier New', Courier, monospace;

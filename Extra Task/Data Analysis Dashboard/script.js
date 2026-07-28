@@ -92,9 +92,8 @@ maximumSpan.textContent = Math.round(maximum);
 
 // create chart
 let myChart = null;
-const createCharts = ({ xValues, yValues }, chartType, chartName) => {
-  const [yName, xName] = chartName.split("Vs");
-  console.log(yName, xName);
+const createCharts = ({ xValues, yValues }, chartType) => {
+
   const barColors = [
     "Red",
     "Blue",
@@ -132,32 +131,7 @@ const createCharts = ({ xValues, yValues }, chartType, chartName) => {
           font: { size: 20 },
         },
       },
-      scales: {
-        x: {
-          title: {
-            display: true,
-            text: xName.toUpperCase(),
-            color: "#000000",
-            font: {
-              size: 16,
-              weight: "bold",
-            },
-          },
-        },
-        y: {
-          
-          title: {
-            display: true,
-            text: yName.toUpperCase(),
-            color: "#000000",
-            font: {
-              size: 16,
-              weight: "bold",
-            },
-          },
-        },
-      },
-    },
+    }
   });
 };
 
@@ -188,7 +162,7 @@ selectChartName.addEventListener("change", (e) => {
   console.log("chartName", chartName);
   const chartTypeValue = selectChartType.value;
   console.log("chartTypeValue", chartTypeValue);
-  createCharts(chartsData[chartName], chartTypeValue, chartName);
+  createCharts(chartsData[chartName], chartTypeValue);
 });
 
 chartType.addEventListener("change", (e) => {
@@ -198,11 +172,10 @@ chartType.addEventListener("change", (e) => {
   console.log("chartTypeValue", chartTypeValue);
   const chartName = selectChartName.value;
   console.log("chart name", chartName);
-  createCharts(chartsData[chartName], chartTypeValue, chartName);
+  createCharts(chartsData[chartName], chartTypeValue);
 });
 
 createCharts(
   chartsData[selectChartName.value],
-  selectChartType.value,
-  selectChartName.value,
+  selectChartType.value
 );
